@@ -13,7 +13,7 @@ app.get("/auth/facebook", (req, res) => {
   const redirectUri = `${BASE_URL}/auth/facebook/callback`;
   const url = `https://www.facebook.com/v17.0/dialog/oauth?client_id=${APP_ID}&redirect_uri=${encodeURIComponent(
     redirectUri
-  )}&scope=email,user_posts,publish_actions&response_type=code`;
+  )}&scope=email,public_profile&response_type=code`;
 
   res.redirect(url);
 });
